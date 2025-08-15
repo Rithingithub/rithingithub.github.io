@@ -283,7 +283,8 @@
           </div>
         </div>
         <div class="contact-form fade-in">
-          <form action="#" method="POST">
+          <!-- Contact Form with Formspree -->
+          <form action="https://formspree.io/f/xovlbrkb" method="POST">
             <div class="form-group">
               <input type="text" name="name" placeholder="Your Name" required />
             </div>
@@ -311,6 +312,17 @@
                 required
               ></textarea>
             </div>
+
+            <!-- Optional: Add hidden field for spam protection -->
+            <input type="text" name="_gotcha" style="display: none" />
+
+            <!-- Optional: Redirect after success -->
+            <input
+              type="hidden"
+              name="_redirect"
+              value="https://yourwebsite.com/thank-you.html"
+            />
+
             <button type="submit" class="btn btn-primary">Send Message</button>
           </form>
         </div>

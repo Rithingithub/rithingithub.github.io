@@ -86,36 +86,36 @@ $(document).ready(function () {
   createParticles();
 
   // Contact form submission
-  $("form").on("submit", function (e) {
-    e.preventDefault();
+  // $("form").on("submit", function (e) {
+  //   e.preventDefault();
 
-    // Get form data
-    const formData = {
-      name: $('input[name="name"]').val(),
-      email: $('input[name="email"]').val(),
-      subject: $('input[name="subject"]').val(),
-      message: $('textarea[name="message"]').val(),
-    };
+  //   // Get form data
+  //   const formData = {
+  //     name: $('input[name="name"]').val(),
+  //     email: $('input[name="email"]').val(),
+  //     subject: $('input[name="subject"]').val(),
+  //     message: $('textarea[name="message"]').val(),
+  //   };
 
-    // Simple validation
-    if (!formData.name || !formData.email || !formData.message) {
-      alert("Please fill in all required fields.");
-      return;
-    }
+  //   // Simple validation
+  //   if (!formData.name || !formData.email || !formData.message) {
+  //     alert("Please fill in all required fields.");
+  //     return;
+  //   }
 
-    // Simulate form submission
-    const submitBtn = $(this).find('button[type="submit"]');
-    const originalText = submitBtn.text();
+  //   // Simulate form submission
+  //   const submitBtn = $(this).find('button[type="submit"]');
+  //   const originalText = submitBtn.text();
 
-    submitBtn.text("Sending...").prop("disabled", true);
+  //   submitBtn.text("Sending...").prop("disabled", true);
 
-    // Simulate API call
-    setTimeout(() => {
-      alert("Thank you for your message! I'll get back to you soon.");
-      this.reset();
-      submitBtn.text(originalText).prop("disabled", false);
-    }, 2000);
-  });
+  //   // Simulate API call
+  //   setTimeout(() => {
+  //     alert("Thank you for your message! I'll get back to you soon.");
+  //     this.reset();
+  //     submitBtn.text(originalText).prop("disabled", false);
+  //   }, 2000);
+  // });
 
   // Trigger initial fade-in animation
   setTimeout(() => {
